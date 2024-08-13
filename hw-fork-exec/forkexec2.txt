@@ -1,0 +1,31 @@
+18.Starting program; process has pid 1481331
+   Section A;  pid 1481331
+   Section A;  pid 1481337
+   Section C
+   Section B
+   hello from Section B
+19.Starting program; process has pid 3346407
+   Section A;  pid 3346407
+   Section A;  pid 3346412
+   Section C
+   Section B
+   Program "./fork" has pid 3346412. Sleeping.
+   Running exec of "/bin/cat"
+   foobar
+   hello from Section B  
+20.Starting program; process has pid 98278
+   Section A;  pid 98278
+   Section C
+   Section A;  pid 98284
+   Section B
+   Program "./fork" has pid 98284. Sleeping.
+   Running exec of "/bin/cat"
+   hello from Section B
+   
+   fork-output.txt:
+   BEFORE FORK
+   SECTION A
+   SECTION A
+   SECTION C
+   SECTION B
+   foobar

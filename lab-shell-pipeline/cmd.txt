@@ -1,0 +1,1 @@
+/bin/cat test2.txt | /bin/grep bar

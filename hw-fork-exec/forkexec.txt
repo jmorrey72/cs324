@@ -1,0 +1,47 @@
+1. exec.c takes as a command line variable the path to another executable followed by command line variables for that program. It then runs the program that was passed.
+2. After the program passed to exec.c has returned
+3. ./exec /bin/cat
+   Program "./exec" has pid 1697505. Sleeping.                                              │
+   Running exec of "/bin/cat"
+4. ps -p 1699149 -o user,pid,ppid,state,ucmd
+   USER         PID    PPID S CMD
+   jmorrey  1699149 1696552 S exec
+   USER         PID    PPID S CMD
+   jmorrey  1699149 1696552 S cat
+5. All fields are the same except for the command which changed from exec to cat
+6. Program "./exec" has pid 1700046. Sleeping.                                              │
+   Running exec of "/fakenews"                                                              │
+   End of program "./exec".
+   
+   
+18.Starting program; process has pid 1481331
+   Section A;  pid 1481331
+   Section A;  pid 1481337
+   Section C
+   Section B
+   hello from Section B
+19.Starting program; process has pid 3346407
+   Section A;  pid 3346407
+   Section A;  pid 3346412
+   Section C
+   Section B
+   Program "./fork" has pid 3346412. Sleeping.
+   Running exec of "/bin/cat"
+   foobar
+   hello from Section B  
+20.Starting program; process has pid 98278
+   Section A;  pid 98278
+   Section C
+   Section A;  pid 98284
+   Section B
+   Program "./fork" has pid 98284. Sleeping.
+   Running exec of "/bin/cat"
+   hello from Section B
+   
+   fork-output.txt:
+   BEFORE FORK
+   SECTION A
+   SECTION A
+   SECTION C
+   SECTION B
+   foobar

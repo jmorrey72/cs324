@@ -1,0 +1,21 @@
+1.  socket() and connect()
+2.  sendto() or sendmsg() would need to be called instead of write() and the remote address would need to be specified.
+3.  Command line args
+4.  The port number does not change.
+5.  The port number changes with different sockets.
+6.  One socket for all clients
+7.  3
+8.  3
+9.  3
+10. the server recieve operations only return one packet at a time. 
+11. The original socket is listening for new connections, while the new socket is actually connected to the client and able to transmit data.
+12. connect on a tcp socket creates an unchangeable connection, while on a udp socket it can be changed and reconnected.
+13. The client has already called connect, so the connection is already established and ready to transmit data, even if none has been sent.
+14. The addresses are all the same.
+15. The addresses are different.
+16. server.c uses one socket for each connection.
+17. 3
+18. 3
+19. 1
+20. tcp connections are stream-based and do not preserve the boundaries between different packets.
+21. 

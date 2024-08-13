@@ -1,0 +1,25 @@
+// pid = myfork();
+    // if (pid == 0) {
+    //     if (stdin_redir[0] >= 0) {
+    //         // Redirect stdin to the filename at argv[stdin_redir[0]]
+    //         FILE* infile = fopen(argv[stdin_redir[0]], "r");
+    //         mydup2(fileno(infile), 0);
+    //         myclose(fileno(infile));
+    //     }
+    //     if (stdout_redir[0] >= 0) {
+    //         // Redirect stdout to the filename at argv[stdout_redir[0]]
+    //         FILE* outfile = fopen(argv[stdout_redir[0]], "w");
+    //         mydup2(fileno(outfile), 1);
+    //         myclose(fileno(outfile));
+    //     }
+    //     myexecve(argv[cmds[0]], &argv[cmds[0]], envp);
+    // } else {
+    //     if (setpgid(pid, pid) == -1) {
+    //             fprintf(stderr, "setpgid() failed.\n");
+    //             exit(1);
+    //     }
+    //     if (waitpid(pid, &wstatus, 0) < 0) {
+    //         fprintf(stderr, "waitpid() failed.\n");
+    //         exit(1);
+    //     }
+    // }
